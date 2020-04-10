@@ -1,29 +1,49 @@
-<!doctype html>
-
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Spacial Labyrinth | Developer Mode (No Dead Ends)</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  
-  <!--<link href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css" rel="stylesheet">
+<!DOCTYPE html>
+<html>
+  <head>
+<!--<link href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css" rel="stylesheet">
   <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>-->
-</head>
+  </head>
+<h1 class="display-4">Spacial Labyrinth Rules</h1>
+<p><a href="https://polymer-web.github.io/polymer/labyrinth/player.html">Player</a><br /> <a href="https://polymer-web.github.io/polymer/labyrinth/player-nodeadends.html">Player (No Dead Ends)</a><br /> <a href="https://polymer-web.github.io/polymer/labyrinth/devmode.html">Developer Mode</a><br /> <a href="https://polymer-web.github.io/polymer/labyrinth/devmode-nodeadends.html">Developer Mode (No Dead Ends)</a><br /> <a href="https://polymer-web.github.io/polymer/labyrinth/path.html">Path</a></p>
+<hr />
+<h2>Rules</h2>
+<h3>Sections</h3>
+<p><a href="#dice">Dice</a></p>
+<div id="dice">
+<h3>Dice Rules (Section A)</h3>
+<ol type="I">
+<li>Rolling the die decides how many moves you have to go.</li>
+<li>You cannot move diagonally.</li>
+<li>Rolling a four makes you roll again</li>
+<ol type="a">
+<li>Rolling a four twice forces you to move exactly once.</li>
+</ol>
+<li>Rolling a five is the same as rolling a two.</li>
+<li>Rolling a six makes you lose 2 of your turns</li>
+<ol type="a">
+<li>Rolling a six on a purple square lets you win the game.</li>
+</ol>
+</ol>
+</div>
+<div id="start">
+<h3>Starting Area (Section B)</h3>
+<ol type="I">
+<li>This is the starting place of the game.</li>
+<li>This is one of the few visible areas of the game, anybody inside the blue area is immune to orange tiles.</li>
+</ol>
+<img alt="starting area" /></div>
+<div id="robots">
+<h3>Automatons (Red Areaa) (Section C)</h3>
+<ol type="I">
+<li>If you run into a red area, go back to the blue tile.</li>
+<ol type="a">
+<li>If you are in a yellow area, you are not affected by any red spaces.</li>
+<li>Red Spaces are shaped in a cross, not a <i>3x3</i> area.</li>
+</ol>
+</ol>
+<img alt="red" href="images/red">
 
-<body>
-  <h1 class="display-4">Spacial Labyrinth Rules</h1>
-  
-<a href="https://polymer-web.github.io/polymer/labyrinth/player.html">Player</a><br>
-<a href="https://polymer-web.github.io/polymer/labyrinth/player-nodeadends.html">Player (No Dead Ends)</a><br>
-<a href="https://polymer-web.github.io/polymer/labyrinth/devmode.html">Developer Mode</a><br>
-<a href="https://polymer-web.github.io/polymer/labyrinth/devmode-nodeadends.html">Developer Mode (No Dead Ends)</a><br>
-<a href="https://polymer-web.github.io/polymer/labyrinth/path.html">Path</a><br>
-<hr>
-  <h2>Rules</h2>
-  <h3></h3>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</div>
 </body>
-
 </html>
